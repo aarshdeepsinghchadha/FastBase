@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FastBase.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+660a971e913812a4c772ac133fe07e158c896660")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0030136c22aadb61140a682efe551928752876e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("FastBase.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FastBase.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
