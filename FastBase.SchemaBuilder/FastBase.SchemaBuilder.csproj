@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FastBase.Domain\FastBase.Domain.csproj" />
+    <ProjectReference Include="..\FastBase.NUnit\FastBase.NUnit.csproj" />
   </ItemGroup>
 
   <ItemGroup>

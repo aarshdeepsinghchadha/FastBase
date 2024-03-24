@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FastBase.Domain.Admin;
 using Microsoft.AspNetCore.Identity;
+using FastBase.Email.Extensions;
 
 namespace FastBase.API.Extensions
 {
@@ -28,6 +29,7 @@ namespace FastBase.API.Extensions
             //services.AddSingleton(mapper);
 
             //Setup External services
+            services.AddEmailService();
 
             return services;
         }
