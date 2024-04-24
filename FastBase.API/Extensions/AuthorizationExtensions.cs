@@ -20,6 +20,7 @@ namespace FastBase.API.Extensions
                 .AddEntityFrameworkStores<DataContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddGoogleAuthentication(config);
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
