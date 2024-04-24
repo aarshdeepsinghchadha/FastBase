@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Email", "FastBase.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Core", "FastBase.Core\FastBase.Core.csproj", "{FD56581A-CC68-4519-BDDD-425E306C211B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Logging", "FastBase.Logging\FastBase.Logging.csproj", "{68891C6B-299C-42AA-AF6C-7836420B30C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.SeriLog", "FastBase.Logging\FastBase.SeriLog.csproj", "{68891C6B-299C-42AA-AF6C-7836420B30C1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Shared", "FastBase.Shared\FastBase.Shared.csproj", "{A9128EF4-B0C9-4431-8425-F441BC41479C}"
 EndProject
@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.NUnit", "FastBase.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.SchemaBuilder", "FastBase.SchemaBuilder\FastBase.SchemaBuilder.csproj", "{35211C20-2200-41D4-8E46-D8C235738817}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBase.Authentication.Models", "FastBase.Authentication.Models\FastBase.Authentication.Models.csproj", "{A99EF7E3-2FB6-49E6-BB15-AEF4C0AE8640}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Authentication.Models", "FastBase.Authentication.Models\FastBase.Authentication.Models.csproj", "{A99EF7E3-2FB6-49E6-BB15-AEF4C0AE8640}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
