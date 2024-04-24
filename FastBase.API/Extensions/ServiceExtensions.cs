@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
+using FastBase.Authentication.Models.Mapping;
+using FastBase.Core.Extensions;
 using FastBase.Domain.Admin;
 using Microsoft.AspNetCore.Identity;
-using FastBase.Email.Extensions;
-using FastBase.Core.Extensions;
 
 namespace FastBase.API.Extensions
 {
@@ -18,19 +18,19 @@ namespace FastBase.API.Extensions
             services.AddScoped<RoleManager<IdentityRole>>();
 
 
-            // Register AutoMapper and add the mapping profile
-            //var mappingConfig = new MapperConfiguration(mc =>
-            //{
-            //    mc.AddProfile(new RegisterMappingConfiguration());
-            //    // Add other profiles if needed
-            //});
+           // Register AutoMapper and add the mapping profile
+               var mappingConfig = new MapperConfiguration(mc =>
+               {
+                   mc.AddProfile(new RegisterMappingConfiguration());
+                   // Add other profiles if needed
+               });
 
 
-            //IMapper mapper = mappingConfig.CreateMapper();
-            //services.AddSingleton(mapper);
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
 
             //Setup External services
-            services.AddEmailService();
 
             return services;
         }

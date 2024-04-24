@@ -18,10 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\FastBase.Authentication\FastBase.Authentication.csproj" />
     <ProjectReference Include="..\FastBase.Core\FastBase.Core.csproj" />
     <ProjectReference Include="..\FastBase.Domain\FastBase.Domain.csproj" />
     <ProjectReference Include="..\FastBase.Email\FastBase.Email.csproj" />

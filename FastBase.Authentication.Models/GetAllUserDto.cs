@@ -14,6 +14,5 @@ namespace FastBase.Authentication.Models
         public string Email { get; set; } = null!;
         public string UserName { get; set; } = null!;
         public bool EmailConfirmed { get; set; } = false;
-        public string Role { get; set; } = null!;
     }
 }

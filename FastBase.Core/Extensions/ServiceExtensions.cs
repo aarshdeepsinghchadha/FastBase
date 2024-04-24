@@ -14,6 +14,7 @@ namespace FastBase.Core.Extensions
         public static void AddTokenService(this IServiceCollection services)
         {
             services.AddScoped<ITokenService, TokenService>();
+            services.AddScoped<ITokenManager, TokenManager>();
         }
     }
 }

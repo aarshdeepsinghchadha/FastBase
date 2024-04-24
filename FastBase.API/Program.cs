@@ -1,9 +1,10 @@
 ﻿using FastBase.API.Extensions;
+using FastBase.Core.Extensions;
 using FastBase.Domain.Admin;
 using FastBase.SchemaBuilder;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
-using Swashbuckle.AspNetCore.SwaggerUI;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDistributedMemoryCache();
@@ -17,11 +18,8 @@ builder.Services.AddService(builder.Configuration);
 builder.Services.AddAuthenticaionService(builder.Configuration);
 builder.Services.AddMvcCoreWithAddOns(builder.Configuration);
 
-// Add Swashbuckle's Swagger services
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" });
-});
+builder.Services.AddVersioning();
+builder.Services.AddSwaggerDocumentation(builder.Configuration, "FastBase API");
 
 var app = builder.Build();
 app.UseRouting();
@@ -43,12 +41,8 @@ var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
 await context.Database.MigrateAsync();
 await Seed.SeedData(context, userManager, roleManager);
 
-app.UseSwagger();
-// Enable Swagger UI
-app.UseSwaggerUI(options =>
-{
-    options.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-    options.DocExpansion(DocExpansion.None);
-});
+var provider = services.GetRequiredService<IApiVersionDescriptionProvider>();
+var config = services.GetRequiredService<IConfiguration>();
+app.UseSwaggerDocumentation(config, provider);
 
 app.Run();

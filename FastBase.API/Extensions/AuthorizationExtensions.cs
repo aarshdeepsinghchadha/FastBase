@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using FastBase.Authentication.Extensions;
 
 namespace FastBase.API.Extensions
 {
@@ -12,6 +13,7 @@ namespace FastBase.API.Extensions
         public static IServiceCollection AddAuthenticaionService(this IServiceCollection services, IConfiguration config)
         {
             services.AddRepositories(config);
+            services.AddAuthService();
 
             // Add Identity
             services.AddIdentity<AppUser, IdentityRole>()
