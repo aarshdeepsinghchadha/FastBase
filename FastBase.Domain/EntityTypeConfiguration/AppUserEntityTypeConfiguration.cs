@@ -8,7 +8,11 @@ namespace FastBase.Domain.EntityTypeConfiguration
     {
         public void Configure(EntityTypeBuilder<AppUser> builder)
         {
-            
+            builder.HasMany(x => x.RefreshTokens)
+                .WithOne(x => x.AppUser)
+                .HasForeignKey(x => x.AppUserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
         }
     }
 }

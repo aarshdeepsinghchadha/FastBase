@@ -6,4 +6,15 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FastBase.Authentication.Models\FastBase.Authentication.Models.csproj" />
+    <ProjectReference Include="..\FastBase.Domain\FastBase.Domain.csproj" />
+    <ProjectReference Include="..\FastBase.SchemaBuilder\FastBase.SchemaBuilder.csproj" />
+    <ProjectReference Include="..\FastBase.Shared\FastBase.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

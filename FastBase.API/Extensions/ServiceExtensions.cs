@@ -2,6 +2,7 @@
 using FastBase.Domain.Admin;
 using Microsoft.AspNetCore.Identity;
 using FastBase.Email.Extensions;
+using FastBase.Core.Extensions;
 
 namespace FastBase.API.Extensions
 {

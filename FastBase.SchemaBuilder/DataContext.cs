@@ -1,4 +1,5 @@
 ﻿using FastBase.Domain.Admin;
+using FastBase.Domain.EntityTypeConfiguration;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,11 +11,13 @@ namespace FastBase.SchemaBuilder
         {
         }
 
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            //modelBuilder.ApplyConfiguration(new AppUserEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new AppUserEntityTypeConfiguration());
         }
     }
 }

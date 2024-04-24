@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace FastBase.Domain.Enums
 {
-    internal class SystemEums
+    public class SystemEnums
     {
+        public enum Roles
+        {
+            SystemAdmin,
+            User
+        }
     }
 }

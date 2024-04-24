@@ -5,27 +5,29 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.API", "FastBase.API\FastBase.API.csproj", "{98836666-2668-44FA-BC48-49C7C62BBCB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBase.Authentication", "FastBase.Authentication\FastBase.Authentication.csproj", "{9390B3BF-F2ED-4309-9990-C05DF4E583A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Authentication", "FastBase.Authentication\FastBase.Authentication.csproj", "{9390B3BF-F2ED-4309-9990-C05DF4E583A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBase.Models", "FastBase.Models\FastBase.Models.csproj", "{5696117D-94E0-4DD3-8B81-1E5AB16602A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Models", "FastBase.Models\FastBase.Models.csproj", "{5696117D-94E0-4DD3-8B81-1E5AB16602A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBase.Services", "FastBase.Services\FastBase.Services.csproj", "{80AA943F-FC22-4C10-BF40-DEF1561B1953}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Services", "FastBase.Services\FastBase.Services.csproj", "{80AA943F-FC22-4C10-BF40-DEF1561B1953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBase.Repository", "FastBase.Repository\FastBase.Repository.csproj", "{E369F0CD-FE3F-4CB3-962F-DB1B997038C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Repository", "FastBase.Repository\FastBase.Repository.csproj", "{E369F0CD-FE3F-4CB3-962F-DB1B997038C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBase.Domain", "FastBase.Domain\FastBase.Domain.csproj", "{4945252A-9C69-4B16-A537-CC9A1AC904C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Domain", "FastBase.Domain\FastBase.Domain.csproj", "{4945252A-9C69-4B16-A537-CC9A1AC904C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBase.Email", "FastBase.Email\FastBase.Email.csproj", "{BB0F51A6-7F96-4588-B6F6-410C8C66FFF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Email", "FastBase.Email\FastBase.Email.csproj", "{BB0F51A6-7F96-4588-B6F6-410C8C66FFF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBase.Core", "FastBase.Core\FastBase.Core.csproj", "{FD56581A-CC68-4519-BDDD-425E306C211B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Core", "FastBase.Core\FastBase.Core.csproj", "{FD56581A-CC68-4519-BDDD-425E306C211B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBase.Logging", "FastBase.Logging\FastBase.Logging.csproj", "{68891C6B-299C-42AA-AF6C-7836420B30C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Logging", "FastBase.Logging\FastBase.Logging.csproj", "{68891C6B-299C-42AA-AF6C-7836420B30C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBase.Shared", "FastBase.Shared\FastBase.Shared.csproj", "{A9128EF4-B0C9-4431-8425-F441BC41479C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.Shared", "FastBase.Shared\FastBase.Shared.csproj", "{A9128EF4-B0C9-4431-8425-F441BC41479C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBase.NUnit", "FastBase.NUnit\FastBase.NUnit.csproj", "{5ACCC7D5-8EB1-448E-8723-B2C9CFB0BA26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.NUnit", "FastBase.NUnit\FastBase.NUnit.csproj", "{5ACCC7D5-8EB1-448E-8723-B2C9CFB0BA26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBase.SchemaBuilder", "FastBase.SchemaBuilder\FastBase.SchemaBuilder.csproj", "{35211C20-2200-41D4-8E46-D8C235738817}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastBase.SchemaBuilder", "FastBase.SchemaBuilder\FastBase.SchemaBuilder.csproj", "{35211C20-2200-41D4-8E46-D8C235738817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastBase.Authentication.Models", "FastBase.Authentication.Models\FastBase.Authentication.Models.csproj", "{A99EF7E3-2FB6-49E6-BB15-AEF4C0AE8640}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{35211C20-2200-41D4-8E46-D8C235738817}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35211C20-2200-41D4-8E46-D8C235738817}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35211C20-2200-41D4-8E46-D8C235738817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A99EF7E3-2FB6-49E6-BB15-AEF4C0AE8640}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A99EF7E3-2FB6-49E6-BB15-AEF4C0AE8640}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A99EF7E3-2FB6-49E6-BB15-AEF4C0AE8640}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A99EF7E3-2FB6-49E6-BB15-AEF4C0AE8640}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

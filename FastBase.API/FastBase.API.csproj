@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FastBase.Core\FastBase.Core.csproj" />
     <ProjectReference Include="..\FastBase.Domain\FastBase.Domain.csproj" />
     <ProjectReference Include="..\FastBase.Email\FastBase.Email.csproj" />
     <ProjectReference Include="..\FastBase.SchemaBuilder\FastBase.SchemaBuilder.csproj" />

@@ -3,58 +3,25 @@ using FastBase.Domain.Admin;
 using FastBase.SchemaBuilder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerUI;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDistributedMemoryCache();
 //builder.Services.AddTransient<TokenManagerMiddleware>();
-//builder.Services.AddTransient<Seed>();
+builder.Services.AddTransient<Seed>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddRepositories(builder.Configuration);
 builder.Services.AddService(builder.Configuration);
 builder.Services.AddAuthenticaionService(builder.Configuration);
+builder.Services.AddMvcCoreWithAddOns(builder.Configuration);
 
-
-// Add Swagger services
-builder.Services.AddSwaggerGen(options =>
+// Add Swashbuckle's Swagger services
+builder.Services.AddSwaggerGen(c =>
 {
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
-
-    // Add a security definition for the API key
-    options.AddSecurityDefinition("ApiKey", new OpenApiSecurityScheme
-    {
-        Type = SecuritySchemeType.ApiKey,
-        Name = "Authorization",
-        In = ParameterLocation.Header,
-        Description = "API key needed to access the endpoints"
-    });
-
-    // Add a security requirement to all endpoints
-    options.AddSecurityRequirement(new OpenApiSecurityRequirement
-    {
-        {
-            new OpenApiSecurityScheme
-            {
-                Reference = new OpenApiReference
-                {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "ApiKey"
-                }
-            },
-            new string[] {}
-        }
-    });
-
-    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-    options.IncludeXmlComments(xmlPath);
-
+    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" });
 });
-
 
 var app = builder.Build();
 app.UseRouting();
@@ -68,13 +35,13 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
-//using var scope = app.Services.CreateScope();
-//var services = scope.ServiceProvider;
-//var context = services.GetRequiredService<DataContext>();
-//var userManager = services.GetRequiredService<UserManager<AppUser>>();
-//var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
-//await context.Database.MigrateAsync();
-//await Seed.SeedData(context, userManager, roleManager);
+using var scope = app.Services.CreateScope();
+var services = scope.ServiceProvider;
+var context = services.GetRequiredService<DataContext>();
+var userManager = services.GetRequiredService<UserManager<AppUser>>();
+var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+await context.Database.MigrateAsync();
+await Seed.SeedData(context, userManager, roleManager);
 
 app.UseSwagger();
 // Enable Swagger UI

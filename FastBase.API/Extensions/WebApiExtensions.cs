@@ -1,5 +1,7 @@
 ﻿using System.Text.Json.Serialization;
 using FastBase.Shared.Extensions;
+using FastBase.Email.Extensions;
+using FastBase.Core.Extensions;
 
 namespace FastBase.API.Extensions
 {
@@ -39,6 +41,9 @@ namespace FastBase.API.Extensions
             //services.AddLoginNameAuthorizationProviders();
             //services.AddOneSiteAuthorizationProviders();
             services.AddResponseGeneratorService();
+
+            services.AddEmailService();
+            services.AddTokenService();
             return services;
         }
     }

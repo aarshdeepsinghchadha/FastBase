@@ -13,7 +13,7 @@ namespace FastBase.Shared.Extensions
     {
         public static void AddResponseGeneratorService(this IServiceCollection services)
         {
-            services.AddSingleton<IResponseGeneratorService, ResponseGeneratorService>();
+            services.AddScoped<IResponseGeneratorService, ResponseGeneratorService>();
         }
     }
 }

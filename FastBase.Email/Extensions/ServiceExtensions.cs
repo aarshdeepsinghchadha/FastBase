@@ -8,7 +8,7 @@ namespace FastBase.Email.Extensions
     {
         public static void AddEmailService(this IServiceCollection services)
         {
-            services.AddSingleton<IEmailSenderService, EmailSenderService>();
+            services.AddScoped<IEmailSenderService, EmailSenderService>();
         }
     }
 }

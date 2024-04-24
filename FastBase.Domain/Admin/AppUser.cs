@@ -6,5 +6,8 @@ namespace FastBase.Domain.Admin
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
+        // Navigation property for one-to-many relationship
+        public ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
     }
 }
